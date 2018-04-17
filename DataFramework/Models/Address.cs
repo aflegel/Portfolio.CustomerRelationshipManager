@@ -10,7 +10,7 @@ namespace DataFramework.Models
 
 		public string Name { get; set; }
 
-		public ICollection<CustomerAddress> CustomerAddresses { get; set; }
+		public ICollection<CompanyAddress> CustomerAddresses { get; set; }
 		public ICollection<ProjectAddress> ProjectAddresses { get; set; }
 	}
 }

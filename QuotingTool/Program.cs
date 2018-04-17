@@ -1,25 +1,19 @@
+﻿using Microsoft.AspNetCore.Blazor.Browser.Rendering;
+using Microsoft.AspNetCore.Blazor.Browser.Services;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 
 namespace QuotingTool
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
-        }
+            var serviceProvider = new BrowserServiceProvider(configure =>
+            {
+                // Add any custom services here
+            });
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+            new BrowserRenderer(serviceProvider).AddComponent<App>("app");
+        }
     }
 }

@@ -10,7 +10,6 @@ namespace DataFramework.Data
 		public virtual DbSet<Project> Projects { get; set; }
 		public virtual DbSet<Department> Departments { get; set; }
 		public virtual DbSet<ProjectSupplier> ProjectSuppliers { get; set; }
-		public virtual DbSet<Supplier> Suppliers { get; set; }
 		public virtual DbSet<Salesperson> Salespersons { get; set; }
 		public virtual DbSet<LineItem> LineItems { get; set; }
 

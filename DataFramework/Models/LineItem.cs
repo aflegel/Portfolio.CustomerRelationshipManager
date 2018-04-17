@@ -10,6 +10,7 @@ namespace DataFramework.Models
 		public int ProjectId { get; set; }
 		public int SupplierId { get; set; }
 		public int DepartmentId { get; set; }
+		public int? PurchaseOrderId { get; set; }
 
 		public string Title { get; set; }
 		public string Description { get; set; }
@@ -23,5 +24,6 @@ namespace DataFramework.Models
 
 		public ProjectSupplier ProjectSupplier { get; set;}
 		public Department Department { get; set; }
+		public PurchaseOrder PurchaseOrder { get; set; }
 	}
 }

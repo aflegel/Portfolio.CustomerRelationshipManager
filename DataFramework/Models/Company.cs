@@ -4,12 +4,16 @@ using System.Text;
 
 namespace DataFramework.Models
 {
-	public class Contact
+	/// <summary>
+	/// Customer, Engineer, or Supplier entities
+	/// </summary>
+	public class Company
 	{
-		public int ContactId { get; set; }
+		public int CompanyId { get; set; }
 
 		public string Name { get; set; }
 
 		public ICollection<CompanyContact> CustomerContacts { get; set; }
+		public ICollection<ProjectSupplier> ProjectSuppliers { get; set; }
 	}
 }
