@@ -10,6 +10,6 @@ namespace DataFramework.Models
 
 		public string Name { get; set; }
 
-		public ICollection<LineItem> LineItems { get; set; }
+		public ICollection<Part> LineItems { get; set; }
 	}
 }

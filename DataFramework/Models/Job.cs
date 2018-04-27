@@ -4,17 +4,19 @@ using System.Text;
 
 namespace DataFramework.Models
 {
-    public class ProjectSupplier
-    {
+	/// <summary>
+	/// 
+	/// </summary>
+	public class Job
+	{
+		public int JobId { get; set; }
 		public int ProjectId { get; set; }
 		public int CompanyId { get; set; }
 
-		public decimal ExchangeRate { get; set; }
+		public string Name { get; set; }
 
 		public Project Project { get; set; }
-		/// <summary>
-		/// Company Record must be a Supplier Company
-		/// </summary>
-		public Company Supplier { get; set; }
+		public Company Customer { get; set; }
+		public ICollection<Component> Components { get; set; }
 	}
 }

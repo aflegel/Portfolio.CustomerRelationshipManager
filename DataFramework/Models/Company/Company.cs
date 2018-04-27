@@ -13,7 +13,9 @@ namespace DataFramework.Models
 
 		public string Name { get; set; }
 
+		public ICollection<Project> Projects { get; set; }
 		public ICollection<CompanyContact> CustomerContacts { get; set; }
 		public ICollection<ProjectSupplier> ProjectSuppliers { get; set; }
+		public ICollection<CompanyAddress> CompanyAddresses { get; set; }
 	}
 }
